@@ -1,10 +1,7 @@
-x = []
+import sys
 
-for _ in range(int(input())):
-    a, b = input().split()
-    x.append([int(a), b])
+name_list = sys.stdin.readlines()[1:]
 
-x.sort(key=lambda x: (x[0]))
+name_list.sort(key=lambda iD : int(iD.split()[0]))
 
-for i in x:
-    print(f"{i[0]} {i[1]}")
+print("".join(name_list))
