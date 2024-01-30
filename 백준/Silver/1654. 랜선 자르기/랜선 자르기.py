@@ -1,8 +1,8 @@
 K, N = map(int, input().split())
 
-lans = sorted(list(int(input()) for _ in range(K)))
+lans = list(int(input()) for _ in range(K))
 
-low, high = 1, lans[-1]
+low, high = 1, max(lans)
 
 while low <= high:
     mid = (low + high) // 2
